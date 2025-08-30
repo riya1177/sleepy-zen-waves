@@ -2,50 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Sleepy App Design System - Calming blue gradients and animations */
+/* Advanced Sleepy App Design System - Premium dark themes and gradients */
 
 @layer base {
   :root {
-    /* Sleepy Color Palette - Calming Blues */
-    --background: 220 100% 98%;
-    --foreground: 224 71% 4%;
+    /* Light Theme - Soft blues and purples */
+    --background: 240 20% 99%;
+    --foreground: 240 19% 16%;
 
     --card: 0 0% 100%;
-    --card-foreground: 224 71% 4%;
+    --card-foreground: 240 19% 16%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 224 71% 4%;
+    --popover-foreground: 240 19% 16%;
 
-    /* Primary - Deep sleep blue */
-    --primary: 224 76% 48%;
-    --primary-foreground: 210 40% 98%;
+    /* Premium purple-blue palette */
+    --primary: 250 84% 54%;
+    --primary-foreground: 0 0% 100%;
 
-    /* Secondary - Light dreamy blue */
-    --secondary: 214 32% 91%;
-    --secondary-foreground: 224 71% 4%;
+    --secondary: 240 19% 95%;
+    --secondary-foreground: 240 19% 16%;
 
-    --muted: 214 32% 91%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 240 19% 95%;
+    --muted-foreground: 240 5% 64%;
 
-    /* Accent - Sky blue for highlights */
-    --accent: 199 89% 48%;
-    --accent-foreground: 210 40% 98%;
+    /* Vibrant accent colors */
+    --accent: 280 89% 66%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 224 76% 48%;
+    --border: 240 19% 88%;
+    --input: 240 19% 88%;
+    --ring: 250 84% 54%;
 
-    /* Sleepy gradients */
-    --gradient-sleepy: linear-gradient(135deg, hsl(220 100% 98%) 0%, hsl(214 100% 92%) 50%, hsl(199 100% 95%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8) 0%, hsl(214 100% 98% / 0.6) 100%);
+    /* Advanced gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(250 84% 54%) 0%, hsl(280 89% 66%) 100%);
+    --gradient-sleepy: linear-gradient(135deg, hsl(240 20% 99%) 0%, hsl(250 50% 94%) 50%, hsl(280 60% 96%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.9) 0%, hsl(250 50% 98% / 0.7) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(250 84% 54% / 0.1) 0%, hsl(280 89% 66% / 0.1) 100%);
     
-    /* Sleepy shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(224 76% 48% / 0.1);
-    --shadow-dream: 0 8px 32px -8px hsl(224 76% 48% / 0.15);
-    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.3);
+    /* Premium shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(250 84% 54% / 0.15);
+    --shadow-dream: 0 8px 32px -8px hsl(250 84% 54% / 0.2);
+    --shadow-glow: 0 0 40px hsl(280 89% 66% / 0.4);
+    --shadow-intense: 0 20px 60px -12px hsl(250 84% 54% / 0.25);
 
     --radius: 0.5rem;
 
@@ -67,42 +75,53 @@
   }
 
   .dark {
-    /* Dark mode for sleepy app - deep night blues */
-    --background: 224 71% 4%;
-    --foreground: 210 40% 98%;
+    /* Premium Dark Theme - Deep space aesthetic */
+    --background: 240 23% 9%;
+    --foreground: 240 19% 95%;
 
-    --card: 224 63% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 240 21% 12%;
+    --card-foreground: 240 19% 95%;
 
-    --popover: 224 63% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 240 21% 12%;
+    --popover-foreground: 240 19% 95%;
 
-    --primary: 199 89% 48%;
-    --primary-foreground: 224 71% 4%;
+    /* Glowing purple-pink accents */
+    --primary: 270 91% 65%;
+    --primary-foreground: 240 23% 9%;
 
-    --secondary: 215 28% 17%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 240 17% 18%;
+    --secondary-foreground: 240 19% 95%;
 
-    --muted: 215 28% 17%;
-    --muted-foreground: 217 9% 65%;
+    --muted: 240 17% 18%;
+    --muted-foreground: 240 5% 64%;
 
-    --accent: 199 89% 48%;
-    --accent-foreground: 224 71% 4%;
+    --accent: 320 86% 72%;
+    --accent-foreground: 240 23% 9%;
 
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 100%;
 
-    --border: 215 28% 17%;
-    --input: 215 28% 17%;
-    --ring: 199 89% 48%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
 
-    /* Dark mode gradients */
-    --gradient-sleepy: linear-gradient(135deg, hsl(224 71% 4%) 0%, hsl(224 63% 8%) 50%, hsl(215 28% 17%) 100%);
-    --gradient-card: linear-gradient(145deg, hsl(224 63% 8% / 0.8) 0%, hsl(215 28% 17% / 0.6) 100%);
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 17% 18%;
+    --input: 240 17% 18%;
+    --ring: 270 91% 65%;
+
+    /* Dark mode advanced gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 91% 65%) 0%, hsl(320 86% 72%) 100%);
+    --gradient-sleepy: linear-gradient(135deg, hsl(240 23% 9%) 0%, hsl(250 30% 15%) 50%, hsl(270 40% 18%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(240 21% 12% / 0.9) 0%, hsl(250 25% 16% / 0.8) 100%);
+    --gradient-glow: linear-gradient(135deg, hsl(270 91% 65% / 0.2) 0%, hsl(320 86% 72% / 0.2) 100%);
     
-    --shadow-soft: 0 4px 20px -4px hsl(199 89% 48% / 0.2);
-    --shadow-dream: 0 8px 32px -8px hsl(199 89% 48% / 0.25);
-    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.4);
+    /* Intense dark shadows with glow */
+    --shadow-soft: 0 4px 20px -4px hsl(270 91% 65% / 0.3);
+    --shadow-dream: 0 8px 32px -8px hsl(270 91% 65% / 0.4);
+    --shadow-glow: 0 0 40px hsl(320 86% 72% / 0.6);
+    --shadow-intense: 0 20px 60px -12px hsl(270 91% 65% / 0.4);
   }
 }
 
@@ -119,50 +138,129 @@
 }
 
 @layer components {
-  /* Sleepy button variants */
+  /* Advanced button variants */
   .btn-dreamy {
-    @apply bg-gradient-to-r from-primary/90 to-accent/90 text-white shadow-soft hover:shadow-dream transition-all duration-300 backdrop-blur-sm;
+    background: var(--gradient-primary);
+    @apply text-white shadow-dream hover:shadow-intense transition-all duration-500 backdrop-blur-md border border-primary/20 hover:scale-[1.02];
   }
   
   .btn-soft {
-    @apply bg-white/80 text-primary shadow-soft hover:shadow-dream hover:bg-white/90 transition-all duration-300 backdrop-blur-sm;
+    background: var(--gradient-card);
+    @apply text-primary shadow-soft hover:shadow-dream hover:scale-[1.02] transition-all duration-300 backdrop-blur-md border border-primary/10;
+  }
+
+  .btn-glow {
+    background: var(--gradient-primary);
+    @apply text-white shadow-glow hover:shadow-intense transition-all duration-500 backdrop-blur-md border border-accent/30 hover:scale-105;
+  }
+
+  .btn-breathing {
+    @apply bg-success/90 hover:bg-success text-white shadow-soft hover:shadow-dream transition-all duration-300 backdrop-blur-sm;
+  }
+
+  .btn-meditation {
+    @apply bg-accent/90 hover:bg-accent text-white shadow-soft hover:shadow-dream transition-all duration-300 backdrop-blur-sm;
   }
 
   /* Card styles */
   .card-dreamy {
     background: var(--gradient-card);
-    @apply shadow-soft hover:shadow-dream transition-all duration-300 backdrop-blur-md border border-white/20;
+    @apply shadow-dream hover:shadow-intense transition-all duration-500 backdrop-blur-xl border border-primary/20 hover:border-primary/30;
   }
 
-  /* Floating animation for stars/elements */
+  .card-premium {
+    background: var(--gradient-glow);
+    @apply shadow-intense hover:shadow-glow transition-all duration-500 backdrop-blur-xl border border-accent/30;
+  }
+
+  /* Activity cards */
+  .card-activity {
+    @apply card-dreamy hover:scale-[1.02] group cursor-pointer;
+  }
+
+  /* Breathing animation */
+  .breathe-in {
+    animation: breathe-in 4s ease-in-out infinite;
+  }
+
+  .breathe-out {
+    animation: breathe-out 4s ease-in-out infinite;
+  }
+
+  /* Enhanced floating animations */
   .float {
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
   }
 
   .float-delayed {
-    animation: float 6s ease-in-out infinite 2s;
+    animation: float 8s ease-in-out infinite 3s;
+  }
+
+  .float-slow {
+    animation: float 12s ease-in-out infinite 1s;
   }
 
   .pulse-glow {
-    animation: pulse-glow 3s ease-in-out infinite;
+    animation: pulse-glow 4s ease-in-out infinite;
+  }
+
+  .rotate-slow {
+    animation: rotate-360 20s linear infinite;
   }
 }
 
+/* Enhanced keyframe animations */
 @keyframes float {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
-  50% {
-    transform: translateY(-20px) rotate(180deg);
+  33% {
+    transform: translateY(-15px) rotate(60deg);
+  }
+  66% {
+    transform: translateY(-25px) rotate(120deg);
   }
 }
 
 @keyframes pulse-glow {
   0%, 100% {
-    box-shadow: var(--shadow-soft);
+    box-shadow: var(--shadow-dream);
+    transform: scale(1);
   }
   50% {
     box-shadow: var(--shadow-glow);
+    transform: scale(1.05);
+  }
+}
+
+@keyframes breathe-in {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes breathe-out {
+  0%, 100% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}
+
+@keyframes rotate-360 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
