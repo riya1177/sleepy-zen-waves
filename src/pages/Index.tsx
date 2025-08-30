@@ -1,12 +1,46 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
+import WelcomeScreen from '@/components/WelcomeScreen';
+import QuestionScreen from '@/components/QuestionScreen';
+import SoundScreen from '@/components/SoundScreen';
+
+type Screen = 'welcome' | 'question' | 'sound';
 
 const Index = () => {
+  const [currentScreen, setCurrentScreen] = useState<Screen>('welcome');
+  const [selectedReason, setSelectedReason] = useState<string>('');
+
+  const handleStart = () => {
+    setCurrentScreen('question');
+  };
+
+  const handleSelectReason = (reason: string) => {
+    setSelectedReason(reason);
+    setCurrentScreen('sound');
+  };
+
+  const handleRestart = () => {
+    setSelectedReason('');
+    setCurrentScreen('welcome');
+  };
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <AnimatePresence mode="wait">
+        {currentScreen === 'welcome' && (
+          <WelcomeScreen key="welcome" onStart={handleStart} />
+        )}
+        {currentScreen === 'question' && (
+          <QuestionScreen key="question" onSelectReason={handleSelectReason} />
+        )}
+        {currentScreen === 'sound' && (
+          <SoundScreen 
+            key="sound" 
+            selectedReason={selectedReason}
+            onRestart={handleRestart} 
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

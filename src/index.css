@@ -2,39 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Sleepy App Design System - Calming blue gradients and animations */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Sleepy Color Palette - Calming Blues */
+    --background: 220 100% 98%;
+    --foreground: 224 71% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 224 71% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 224 71% 4%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary - Deep sleep blue */
+    --primary: 224 76% 48%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Light dreamy blue */
+    --secondary: 214 32% 91%;
+    --secondary-foreground: 224 71% 4%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 214 32% 91%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Sky blue for highlights */
+    --accent: 199 89% 48%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 224 76% 48%;
+
+    /* Sleepy gradients */
+    --gradient-sleepy: linear-gradient(135deg, hsl(220 100% 98%) 0%, hsl(214 100% 92%) 50%, hsl(199 100% 95%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.8) 0%, hsl(214 100% 98% / 0.6) 100%);
+    
+    /* Sleepy shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(224 76% 48% / 0.1);
+    --shadow-dream: 0 8px 32px -8px hsl(224 76% 48% / 0.15);
+    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.3);
 
     --radius: 0.5rem;
 
@@ -56,41 +67,42 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    /* Dark mode for sleepy app - deep night blues */
+    --background: 224 71% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 224 63% 8%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 224 63% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 199 89% 48%;
+    --primary-foreground: 224 71% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 215 28% 17%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 215 28% 17%;
+    --muted-foreground: 217 9% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 199 89% 48%;
+    --accent-foreground: 224 71% 4%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 215 28% 17%;
+    --input: 215 28% 17%;
+    --ring: 199 89% 48%;
+
+    /* Dark mode gradients */
+    --gradient-sleepy: linear-gradient(135deg, hsl(224 71% 4%) 0%, hsl(224 63% 8%) 50%, hsl(215 28% 17%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(224 63% 8% / 0.8) 0%, hsl(215 28% 17% / 0.6) 100%);
+    
+    --shadow-soft: 0 4px 20px -4px hsl(199 89% 48% / 0.2);
+    --shadow-dream: 0 8px 32px -8px hsl(199 89% 48% / 0.25);
+    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.4);
   }
 }
 
@@ -100,6 +112,81 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    background: var(--gradient-sleepy);
+    min-height: 100vh;
   }
+}
+
+@layer components {
+  /* Sleepy button variants */
+  .btn-dreamy {
+    @apply bg-gradient-to-r from-primary/90 to-accent/90 text-white shadow-soft hover:shadow-dream transition-all duration-300 backdrop-blur-sm;
+  }
+  
+  .btn-soft {
+    @apply bg-white/80 text-primary shadow-soft hover:shadow-dream hover:bg-white/90 transition-all duration-300 backdrop-blur-sm;
+  }
+
+  /* Card styles */
+  .card-dreamy {
+    background: var(--gradient-card);
+    @apply shadow-soft hover:shadow-dream transition-all duration-300 backdrop-blur-md border border-white/20;
+  }
+
+  /* Floating animation for stars/elements */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 3s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: var(--shadow-soft);
+  }
+  50% {
+    box-shadow: var(--shadow-glow);
+  }
+}
+
+/* Background stars animation */
+.stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 4s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
 }
